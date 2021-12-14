@@ -16,12 +16,31 @@
   text-transform: capitalize;
   transition: all .2s linear;
 }
-
 html {
   font-size: 72.5%;
   overflow-x: hidden;
   scroll-margin-top: 5.5rem;
   scroll-behavior: smooth;
+}
+section {
+  padding: 2rem 9%;
+}
+section:nth-child(even) {
+  background: #eee;
+}
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--black);
+  border-radius: .5rem;
+  cursor: pointer;
+  padding: .8rem 3rem;
+}
+.btn:hover {
+  background-color: var(--green);
+  letter-spacing: .1rem;
 }
 
 header {
@@ -80,6 +99,42 @@ header .icons #menu-bars {
   display: none;
 }
 
+
+
+.home .home-slider .slide {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 9rem;
+}
+.home-slider .slide .content {
+  flex: 1 1 45rem;
+}
+.home-slider .slide  .image {
+  flex: 1 1 45rem;
+}
+.home-slider .slide  .image img {
+  width: 100%;
+}
+.home-slider .slide  .content span {
+  color: var(--green);
+  font-size: 2.5rem;
+}
+.home-slider .slide  .content h3 {
+  color: var(--black);
+  font-size: 7rem;
+}
+.home-slider .slide  .content p {
+  color: var(--light-color);
+  font-size: 2rem;
+  padding: .5rem 0;
+}
+.swiper-pagination-bullet-active {
+  background: var(--green)
+}
+
 /* media queries*/
 
 @media (max-width: 996px) {
@@ -88,6 +143,15 @@ header .icons #menu-bars {
   }
   header {
     padding: 1rem 2rem;
+  }
+  section {
+    padding: 2rem;
+  }
+  .home-slider .slide .content {
+    flex: 1 1 40rem;
+  }
+  .home-slider .slide  .image {
+    flex: 1 1 40rem;
   }
 }
 
@@ -102,10 +166,8 @@ header .icons #menu-bars {
     border-top: .1rem solid rgba(0,0,0,.2);
     border-bottom: .1rem solid rgba(0,0,0,.2);
     padding: 1rem;
-    /* clip-path: polygan(0 0, 100% 0, 100% 0, 0 0); */
   }
   header .navbar.active {
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%) */
     top: 6.6rem;
   }
   header .navbar a {
@@ -115,9 +177,12 @@ header .icons #menu-bars {
     font-size: 2rem;
     background: #eee;
   }
+  .home-slider .slide  .content h3 {
+    font-size: 5rem;
+  }
 }
 
-@media (max-width: 996px) {
+@media (max-width: 556px) {
   html {
     font-size: 50%;
   }
